@@ -1,0 +1,24 @@
+<!-- templates/app/listar_personas.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Personas</title>
+</head>
+
+<body>
+    <h1>Lista de Personas</h1>
+    <a href="{% url 'crear_persona' %}">Nueva Persona</a>
+    <ul>
+        {% for persona in personas %}
+        <li>
+            {{ persona.nombre }} - {{ persona.apellido }} - {{ persona.dni }} - {{ persona.celular }}
+            <a href="{% url 'actualizar_persona' persona.id %}">Editar</a>
+            <a href="{% url 'eliminar_persona' persona.id %}">Eliminar</a>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>

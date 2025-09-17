@@ -1,0 +1,20 @@
+<!-- templates/app/crear_producto.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Crear Objeto</title>
+</head>
+
+<body>
+    <h1>Crear Objeto</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Guardar</button>
+    </form>
+    <a href="{% url 'listar_objeto' %}">Volver a la lista de Objetos</a>
+</body>
+
+</html>

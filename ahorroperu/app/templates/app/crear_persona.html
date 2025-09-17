@@ -1,0 +1,20 @@
+<!-- templates/app/crear_persona.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Crear Persona</title>
+</head>
+
+<body>
+    <h1>Crear Persona</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Guardar</button>
+    </form>
+    <a href="{% url 'listar_persona' %}">Volver a la lista de Personas</a>
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+<!-- templates/app/actualizar_producto.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Actualizar Producto</title>
+</head>
+
+<body>
+    <h1>Actualizar Producto</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Guardar Cambios</button>
+    </form>
+    <a href="{% url 'listar_producto' %}">Volver a la lista de productos</a>
+</body>
+
+</html>
